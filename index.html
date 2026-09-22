@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Mejoramos el precio de tu coche nuevo en stock</title>
+  <meta name="description" content="¿Ya tienes presupuesto de concesionario para tu coche nuevo en stock? Lo mejoramos apretando a nivel nacional. Solo pagas si decides comprar con nuestro descuento.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .glow-effect {
+      box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- Header / Selector de Marca -->
+  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div id="brand-logo-icon" class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center font-black text-slate-950 text-xl">
+          M
+        </div>
+        <span id="brand-name" class="font-extrabold text-xl tracking-tight text-white">
+          Motor<span class="text-amber-500">Match</span>
+        </span>
+      </div>
+
+      <!-- Selector para simular dominios -->
+      <div class="flex items-center gap-3 text-xs bg-slate-800/80 p-1 rounded-full border border-slate-700">
+        <button onclick="setBrand('motormatch')" id="btn-motormatch" class="px-3 py-1 rounded-full font-medium transition-all bg-amber-500 text-slate-950">
+          motormatch.es
+        </button>
+        <button onclick="setBrand('negociamicoche')" id="btn-negociamicoche" class="px-3 py-1 rounded-full font-medium transition-all text-slate-400 hover:text-white">
+          negociamicoche.es
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-6xl mx-auto px-4 pt-12 pb-20">
+    <div class="text-center max-w-3xl mx-auto space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+        <i data-lucide="check-check" class="w-4 h-4"></i>
+        Solo coches nuevos y entrega inmediata en concesionarios oficiales
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+        ¿Ya tienes precio para tu coche nuevo? <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+          Te conseguimos uno mejor o no pagas nada.
+        </span>
+      </h1>
+
+      <p class="text-lg text-slate-400 leading-relaxed">
+        Los concesionarios tienen unidades en stock que necesitan matricular urgentemente para cumplir objetivos. Rastreamos la red oficial nacional para reventar el presupuesto que te han dado.
+      </p>
+
+      <!-- Trust Badges -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <p class="text-xs text-slate-400">Trato directo</p>
+          <p class="text-sm font-bold text-white flex items-center gap-1.5 mt-0.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> Factura de Concesionario
+          </p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <p class="text-xs text-slate-400">Sin riesgo</p>
+          <p class="text-sm font-bold text-white flex items-center gap-1.5 mt-0.5">
+            <i data-lucide="coins" class="w-4 h-4 text-amber-400"></i> 0 € si no ahorras
+          </p>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 col-span-2 sm:col-span-1">
+          <p class="text-xs text-slate-400">Plazos</p>
+          <p class="text-sm font-bold text-white flex items-center gap-1.5 mt-0.5">
+            <i data-lucide="zap" class="w-4 h-4 text-sky-400"></i> Stock (entrega en 5-15 días)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cómo funciona (El flujo del dinero y desbloqueo) -->
+    <section class="mt-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10">¿Cómo funciona el desbloqueo de oferta?</h2>
+      
+      <div class="grid sm:grid-cols-3 gap-6">
+        <!-- Paso 1 -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl relative">
+          <span class="text-4xl font-black text-slate-800 absolute top-4 right-4">01</span>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">1. Envías tu oferta actual</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Dinos qué coche exacto quieres (marca, modelo, acabado, motor) y el precio final al contado o financiado que te han presupuestado en tu concesionario local.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl relative">
+          <span class="text-4xl font-black text-slate-800 absolute top-4 right-4">02</span>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center mb-4">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">2. Apretamos a nivel nacional</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Contactamos con jefes de ventas que necesitan cumplir rappel este mes. Si localizamos la misma unidad exacta con mejor precio, te enviamos el desglose del ahorro.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl relative border-amber-500/30">
+          <span class="text-4xl font-black text-amber-500/20 absolute top-4 right-4">03</span>
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+            <i data-lucide="unlock" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">3. Desbloqueas y compras</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            ¿Te convence el descuento? Pagas una pequeña comisión de éxito (ej. 150 €) y se te entrega la hoja de pedido oficial con el contacto directo del concesionario y comercial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculadora de ahorro / Simulador -->
+    <section class="mt-20 bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 glow-effect">
+      <div class="max-w-2xl mx-auto text-center space-y-6">
+        <h3 class="text-xl sm:text-2xl font-bold">Simula tu ahorro de entrega inmediata</h3>
+        <p class="text-xs text-slate-400">Calculado sobre la media de descuentos conseguidos en fin de ciclo de concesionarios</p>
+
+        <div class="space-y-4 text-left bg-slate-950/60 p-6 rounded-2xl border border-slate-800">
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-2">
+              <span>Precio que te han dado en concesionario:</span>
+              <span id="budget-label" class="text-amber-400 text-lg">30.000 €</span>
+            </div>
+            <input 
+              type="range" 
+              min="15000" 
+              max="70000" 
+              step="1000" 
+              value="30000" 
+              id="budget-range"
+              class="w-full accent-amber-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
+              oninput="updateCalc(this.value)"
+            >
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 grid grid-cols-2 gap-4">
+            <div>
+              <p class="text-xs text-slate-400">Ahorro medio estimado</p>
+              <p id="savings-label" class="text-2xl font-black text-emerald-400">~1.500 €</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400">Coste de desbloqueo</p>
+              <p id="fee-label" class="text-2xl font-black text-white">150 €</p>
+              <span class="text-[10px] text-slate-500 block leading-tight">Solo si decides quedarte la unidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de petición directa (WhatsApp) -->
+    <section class="mt-20 max-w-2xl mx-auto" id="formulario">
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-black">Pide tu contraoferta ahora</h3>
+          <p class="text-sm text-slate-400 mt-1">Solo para compradores decididos con intención de compra en menos de 15 días.</p>
+        </div>
+
+        <form id="quote-form" onsubmit="sendToWhatsapp(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Coche exacto (Marca, Modelo y Acabado)</label>
+            <input 
+              type="text" 
+              required
+              id="car_model"
+              placeholder="Ej: Hyundai Tucson 1.6 TGDI 150cv Tecno" 
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 text-white placeholder-slate-600"
+            >
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Tu mejor oferta actual (€)</label>
+              <input 
+                type="number" 
+                required
+                id="current_price"
+                placeholder="Ej: 28400" 
+                class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 text-white placeholder-slate-600"
+              >
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Forma de pago prevista</label>
+              <select 
+                id="payment_type"
+                class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 text-white"
+              >
+                <option value="Al contado">Al contado</option>
+                <option value="Financiado clásico">Financiado estándar</option>
+                <option value="Multiopción / Renting">Multiopción / Con cuota final</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Tu Teléfono / WhatsApp</label>
+            <input 
+              type="tel" 
+              required
+              id="phone"
+              placeholder="Ej: 612 34 56 78" 
+              class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 text-white placeholder-slate-600"
+            >
+          </div>
+
+          <div class="flex items-start gap-2 pt-2">
+            <input type="checkbox" required id="ready_to_buy" class="mt-1 accent-amber-500">
+            <label for="ready_to_buy" class="text-xs text-slate-400">
+              Confirmo que ya he visto el coche, quiero esta unidad concreta y compraré si me conseguís un precio inferior.
+            </label>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full mt-4 py-4 rounded-xl font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 transition-colors flex items-center justify-center gap-2 text-base shadow-lg shadow-amber-500/20"
+          >
+            <i data-lucide="send" class="w-5 h-5"></i>
+            Comprobar si podemos rebajarlo por WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sección de compra/alquiler del dominio (Por si un inversor visita la web) -->
+    <section class="mt-20 border-t border-slate-900 pt-10 text-center">
+      <div class="inline-block p-4 rounded-2xl bg-slate-900/40 border border-slate-800/80 max-w-lg">
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Oportunidad de inversión</p>
+        <p class="text-xs text-slate-400">
+          ¿Eres concesionario oficial, compraventa o broker de automoción? Este dominio y su infraestructura comercial están disponibles para adquisición o cesión.
+        </p>
+        <a 
+          id="domain-inquiry-link"
+          href="mailto:tuemail@dominio.com?subject=Interes en adquirir este dominio" 
+          class="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:underline mt-2 font-medium"
+        >
+          Contactar para adquirir <span id="current-domain-tag">motormatch.es</span> &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Inicializar iconos
+    lucide.createIcons();
+
+    // Configuración de marcas
+    const brands = {
+      motormatch: {
+        name: 'Motor<span class="text-amber-500">Match</span>',
+        icon: 'M',
+        domain: 'motormatch.es',
+        themeClass: 'text-amber-500'
+      },
+      negociamicoche: {
+        name: 'Negocia<span class="text-emerald-400">MiCoche</span>',
+        icon: 'N',
+        domain: 'negociamicoche.es',
+        themeClass: 'text-emerald-400'
+      }
+    };
+
+    let activeBrand = 'motormatch';
+
+    function setBrand(brandKey) {
+      activeBrand = brandKey;
+      const b = brands[brandKey];
+      
+      document.getElementById('brand-name').innerHTML = b.name;
+      document.getElementById('brand-logo-icon').innerText = b.icon;
+      document.getElementById('current-domain-tag').innerText = b.domain;
+      document.getElementById('page-title').innerText = `${b.domain} | Mejoramos el precio de tu coche nuevo en stock`;
+
+      // Botones selector
+      const btnMotor = document.getElementById('btn-motormatch');
+      const btnNegocia = document.getElementById('btn-negociamicoche');
+
+      if (brandKey === 'motormatch') {
+        btnMotor.className = "px-3 py-1 rounded-full font-medium transition-all bg-amber-500 text-slate-950";
+        btnNegocia.className = "px-3 py-1 rounded-full font-medium transition-all text-slate-400 hover:text-white";
+        document.getElementById('brand-logo-icon').className = "w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center font-black text-slate-950 text-xl";
+      } else {
+        btnNegocia.className = "px-3 py-1 rounded-full font-medium transition-all bg-emerald-400 text-slate-950";
+        btnMotor.className = "px-3 py-1 rounded-full font-medium transition-all text-slate-400 hover:text-white";
+        document.getElementById('brand-logo-icon').className = "w-9 h-9 rounded-lg bg-emerald-400 flex items-center justify-center font-black text-slate-950 text-xl";
+      }
+    }
+
+    // Auto-detección por hostname
+    const host = window.location.hostname.toLowerCase();
+    if (host.includes('negociamicoche')) {
+      setBrand('negociamicoche');
+    } else {
+      setBrand('motormatch');
+    }
+
+    // Calculadora dinámica
+    function updateCalc(val) {
+      const budget = parseInt(val, 10);
+      document.getElementById('budget-label').innerText = budget.toLocaleString('es-ES') + ' €';
+
+      // Estimación aproximada de ahorro (entre el 4% y el 7% en stock)
+      const estimatedSavings = Math.round(budget * 0.05);
+      document.getElementById('savings-label').innerText = `~${estimatedSavings.toLocaleString('es-ES')} €`;
+
+      // Tarifa fija o variable
+      const fee = estimatedSavings > 2000 ? 190 : 120;
+      document.getElementById('fee-label').innerText = `${fee} €`;
+    }
+
+    // Envío a WhatsApp (sustituye TU_TELEFONO por tu número con prefijo internacional, ej: 34600000000)
+    function sendToWhatsapp(e) {
+      e.preventDefault();
+      const TU_TELEFONO = "34670250280"; // Pon aquí tu WhatsApp
+      
+      const model = document.getElementById('car_model').value;
+      const price = document.getElementById('current_price').value;
+      const payment = document.getElementById('payment_type').value;
+      const clientPhone = document.getElementById('phone').value;
+      const domain = brands[activeBrand].domain;
+
+      const message = `Hola! Quiero mejorar una oferta de coche nuevo en stock (${domain}):%0A%0A` +
+                      `🚗 *Coche:* ${model}%0A` +
+                      `💰 *Mi oferta actual:* ${price} €%0A` +
+                      `💳 *Pago:* ${payment}%0A` +
+                      `📱 *Mi Teléfono:* ${clientPhone}%0A%0A` +
+                      `Estoy listo para comprar si conseguís rebajarlo.`;
+
+      window.open(`https://wa.me/${TU_TELEFONO}?text=${+34670250280}`, '_blank');
+    }
+  </script>
+</body>
+</html>
